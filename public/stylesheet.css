@@ -1,22 +1,19 @@
 /* fonts */
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400|Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins&display=swap');
 
 /* css variables */
 :root {
-  --primaryColor: #3fd0d4;
+  --veryDarkBlue: hsl(243, 87%, 12%);
   --mainWhite: #fff;
-  --offWhite: #f7f7f7;
+  --desaturatedBlue: hsl(238, 22%, 44%);
   --mainBlack: #222;
-  --mainGrey: #ececec;
-  --darkGrey: #afafaf;
-  --mainbeige: rgb(255, 170, 60, 0.3);
-  --darkbeige: rgb(255, 170, 60, 0.8);
-  --mainTransition: all 0.3s linear;
+  --brightBlue: hsl(224, 93%, 58%);
+  --lightBrightBlue: hsl(224, 94%, 63%);
+  --moderateCyan: hsl(170, 45%, 43%);
+  --lightGrayishBlue: hsl(240, 75%, 98%);
+  --lightGray: hsl(0, 0%, 75%);
   --mainSpacing: 0.25rem;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.25);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
-
 /* reset */
 *,
 ::before,
@@ -25,15 +22,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 /* body */
 body {
-  font-family: "Futura", sans-serif;
-  color: var(--mainBlack);
-  background: var(--offWhite);
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.4;
   font-size: 1rem;
-  width: 100%;
+  font-weight: 400;
 }
 
 /*************** global styles ***************/
@@ -44,93 +38,409 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
+  font-weight: 700;
 }
-
 h1 {
   font-size: 3.3rem;
 }
-
 h2 {
   font-size: 2.3rem;
 }
-
 h3 {
   font-size: 2rem;
 }
-
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  color: var(--mainWhite);
 }
-
+h6 {
+  font-weight: 900;
+  letter-spacing: 0.05rem;
+  margin-bottom: 0rem;
+}
 p {
   margin-bottom: 1.25rem;
-  line-height: 2;
-  font-weight: 300;
+  line-height: 1.4;
 }
-
 a {
   text-decoration: none;
 }
 
 /* more global styles */
-
+input[type='email'] {
+  color: rgb(147, 147, 147);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding-left: 1rem;
+}
+input[type='email']:focus {
+  outline: none;
+}
+input[type='submit'] {
+  font-size: 1rem;
+}
+input[type='submit']:hover {
+  background-color: var(--lightBrightBlue);
+  cursor: pointer;
+}
 /* buttons */
 
 /* section */
 
 /* title */
-
+nav,
+.file-text-container,
+.productive-text,
+.early-access-container,
+.foot {
+  padding: 30px;
+}
 /*************** end of global styles ***************/
+
+/*************** Structure site ***************/
+
+/*************** fin Structure site ***************/
 /*************** navbar ***************/
 ul {
   list-style-type: none;
-  height: 50px;
-  position: fixed;
-  z-index: 2;
-  min-width: 900px;
+  height: 10vh;
   width: 100%;
 }
 li {
-  float: left;
+  float: right;
   display: block;
+  font-size: 0.8rem;
   text-align: center;
-  padding: 2px 2px;
+  padding: 2px 20px;
   text-decoration: none;
-  font-family: "Brush Script MT", "cursive";
-  font-size: 30px;
+}
+nav a {
+  color: var(--mainBlack);
+}
+.logo {
+  height: 5vh;
 }
 /*************** fin navbar ***************/
-/*************** Structure site ***************/
-.main-container {
+/*************** File text section ***************/
+.file-text-container {
   display: grid;
-  grid-area: "fileText illustration1" "vague vague"
-    "productiveText illustration2" "avis illustration2" "earlyacces form2"
-    "foot foot";
+  grid-template-columns: 50% 50%;
+  min-height: 80vh;
+  margin-bottom: 10px;
 }
-/*************** fin Structure site ***************/
+.file-text {
+  width: 100%;
+  align-self: center;
+}
+.illustration1 {
+  width: 100%;
+  align-self: center;
+}
+.form1 {
+  display: flex;
+  gap: 20px;
+}
+.mail1 {
+  width: 50%;
+}
 
-/*************** Accroche ***************/
+.btn1 {
+  width: 30%;
+  background-color: var(--brightBlue);
+  border-radius: 3px;
+  color: var(--mainWhite);
+  border: none;
+  height: 30px;
+  box-shadow: 2px 2px 5px var(--lightGray);
+}
+/*************** fin de File text section***************/
+/*************** vague section ***************/
 
-/*************** fin de Accroche***************/
-/*************** Valise section ***************/
+/*************** end vague section ***************/
+/*************** Productive text section ***************/
+.productive-text-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    'vague vague'
+    'productiveText illustration2';
+  background: var(--lightGrayishBlue);
+  min-height: 80vh;
+}
+.p11 {
+  font-size: 1.25rem;
+}
+.vague {
+  grid-area: vague;
+  width: 100%;
+  background: var(--mainWhite);
+}
+.productive-text {
+  grid-area: productiveText;
+  width: 100%;
+  align-self: center;
+}
+.productive-text-container a {
+  position: relative;
+}
+.productive-text-container a:hover {
+  border-bottom: 1px solid green;
+  color: green;
+}
+.link img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.productive-text-container p {
+  margin-bottom: 0.8rem;
+}
+.card {
+  margin-top: 2rem;
+  padding: 10px;
+  background: var(--mainWhite);
+  border-radius: 10px;
+  width: 70%;
+  box-shadow: 5px 5px 10px var(--lightGray);
+}
+.p2 {
+  font-size: 0.8rem;
+}
+.avis {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-/*************** end of about section ***************/
-/*************** services section ***************/
-
-/*************** end of services section ***************/
-/*************** featured tours section ***************/
-
-/*************** end of featured tours section ***************/
-/*************** gallery ***************/
-
-/*************** end of gallery ***************/
-/*************** deals ***************/
-
-/*************** end of deals ***************/
+.avis-person {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+.avis-person-text {
+  height: 30px;
+}
+.p3 {
+  font-size: 0.5rem;
+}
+.illustration2 {
+  grid-area: illustration2;
+  width: 100%;
+  align-self: center;
+}
+/*************** end of Productive text section ***************/
+/*************** early acces section ***************/
+.early-access-container {
+  min-height: 40vh;
+  background: var(--desaturatedBlue);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: 'earlyacces form2';
+}
+.early-access {
+  grid-area: earlyacces;
+  align-self: center;
+  width: 80%;
+}
+.p4 {
+  color: var(--mainWhite);
+}
+.form2 {
+  grid-area: form2;
+  align-self: center;
+}
+.mail2 {
+  height: 30px;
+  width: 70%;
+}
+.btn2 {
+  margin-top: 10px;
+  width: 30%;
+  background-color: var(--brightBlue);
+  border-radius: 1px;
+  color: var(--mainWhite);
+  border: none;
+  box-shadow: 2px 2px 5px var(--veryDarkBlue);
+  height: 30px;
+}
+/*************** end of early acces section ***************/
 /*************** footer ***************/
-/************ navbar *****************/
+.foot {
+  display: grid;
+  grid-template-columns: 30% 20% 20% 30%;
+  grid-template-areas:
+    'fylo fylo fylo fylo'
+    'contact about contactUs icones';
+  background-color: var(--veryDarkBlue);
+}
+
+.fylo-foot {
+  grid-area: fylo;
+  height: 5vh;
+  margin-bottom: 1.5rem;
+}
+.contact {
+  grid-area: contact;
+}
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1.25rem;
+}
+.mail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.foot a {
+  color: var(--mainWhite);
+}
+.foot a:hover {
+  color: var(--brightBlue);
+}
+.p6 {
+  color: var(--mainWhite);
+  margin-bottom: 0px;
+}
+.about {
+  grid-area: about;
+}
+.contact-us {
+  grid-area: contactUs;
+}
+
+.logo-social {
+  width: 5vh;
+  margin-right: 1rem;
+}
+/*************** end of footer ***************/
+/************ responsive *****************/
+@media only screen and (max-width: 1200px) {
+  .btn2 {
+    width: 40%;
+  }
+  .mail2 {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 14px;
+  }
+  .btn2 {
+    width: 40%;
+  }
+  .mail2 {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 780px) {
+  html {
+    font-size: 12px;
+  }
+  .btn2 {
+    width: 50%;
+  }
+  .mail2 {
+    width: 90%;
+  }
+  .foot {
+    grid-template-columns: 40% 20% 20% 20%;
+  }
+  .logo-social {
+    width: 4vh;
+    margin-right: 0.5rem;
+  }
+}
+@media only screen and (max-width: 680px) {
+  html {
+    font-size: 14px;
+  }
+  .file-text-container {
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
+  }
+  .file-text {
+    grid-row-start: 2;
+  }
+  .illustration1 {
+    grid-row-start: 1;
+  }
+  .form1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .mail1 {
+    align-self: center;
+    width: 70%;
+    height: 30px;
+  }
+  .btn1 {
+    width: 70%;
+    align-self: center;
+  }
+  .productive-text-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      'vague'
+      'illustration2'
+      'productiveText';
+    text-align: center;
+  }
+  .card {
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .early-access-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      'earlyacces'
+      'form2';
+    text-align: center;
+  }
+  .early-access {
+    width: 100%;
+  }
+  .btn2 {
+    width: 70%;
+  }
+  .mail2 {
+    width: 70%;
+  }
+  .foot {
+    grid-template-columns: 100%;
+    gap: 20px;
+    grid-template-areas:
+      'fylo'
+      'contact'
+      'about'
+      'contactUs'
+      'icones';
+  }
+  .icones {
+    justify-self: center;
+  }
+  .logo-social {
+    width: 4vh;
+    margin-right: 0.5rem;
+  }
+}
+@media only screen and (max-width: 440px) {
+  li {
+    padding: 2px 5px;
+  }
+  .logo {
+    height: 5vh;
+  }
+}
 
 /* CSS */

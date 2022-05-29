@@ -2,85 +2,95 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Filo Landing Page</title>
         <link rel="stylesheet" href="stylesheet.css" >
+        <script src="https://kit.fontawesome.com/5024e0dd88.js" crossorigin="anonymous"></script>
         
     </head>
     <body>
         <nav>
-            
             <ul>
-                <li><img src="img/logo.svg" alt=""></li>
-                <li>Features</li>
-                <li>Team</li>
-                <li>Sign In</li>
+                <li2><img src="img/logo.svg" alt="" class="logo"></li>
+                <li><a href="#SignIn" class="link">Sign In</li></a>
+                <li><a href="#Team" class="link">Team</li></a>
+                <li><a href="#Features" class="link">Features</li></a>
             </ul>
         </nav>
-        <div class="main-container">
-            <section class="file-text">
-                <h2>All your files in one secure location, accessible anywhere.</h2>
+        <section class="file-text-container">
+            <div class="file-text">
+                <h3>All your files in one secure location, accessible anywhere.</h3>
                 <p>Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.</p>
                 <form class="form1">
-                        <input type="text" id="mail1" name="mail1" value=""><br>
-                        <input type="submit" value="Get Started">
+                        <input type="email" id="mail1" name="mail1" placeholder="Enter your email..." class="mail1"><br>
+                        <input type="submit" value="Get Started" class="btn1">
                 </form>
-            </section>
+            </div>
             <img src="img/illustration-1.svg" alt="" class="illustration1">
-            <div class="vague"></div>
+        </section>
+        <section class="productive-text-container">
+            <img src="img/bg-curve-desktop.svg" alt="" class="vague">
             <section class="productive-text">
-                <h2>Stay productive, wherever you are</h2>
-                <p>Never let location be an issue when accessing your files. Fylo has you covered for all your file storage needs.<br>
-                Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required!</p>
-                    <a href="#">See how Fylo works <img src="img/icon-arrow.svg" alt="" ></a>
+                <h3>Stay productive, wherever you are</h3>
+                <p>Never let location be an issue when accessing your files. Fylo has you covered for all your file storage needs.</p>
+                <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required!</p>
+                <a href="#" class="link">See how Fylo works <img src="img/icon-arrow.svg" alt=""></a>
+                <section class="card">
+                    <img src="img/icon-quotes.svg" alt="">
+                    <p class="p2">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+                    <div class="avis">
+                        <img src="img/avatar-testimonial.jpg" class="avis-person">
+                        <div class="avis-person-text">
+                            <h6>Kyle Burton</h6>
+                            <p class="p3">Founder & CEO, Huddle</p>
+                        </div>
+                    </div>
+                </section>
             </section>
-            <section class="avis">
-                <img src="img/icon-quotes.svg" alt="">
-                <p class="p2">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
-                <div class="avis-personne">
-                    <img src="img/avatar-testimonial.jpg">
-                    <h6>Kyle Burton</h6>
-                    <p class="p3">Founder & CEO, Huddle</p>
-                </div>
-            </section>
-            <img src = "img/illustration-2.svg" alt="" class="illustration2">
-            <section class="early-access">
+            <img src="img/illustration-2.svg" alt="" class="illustration2">
+        </section>
+        <section class="early-access-container">
+            <div class="early-access">
                 <h4>Get early access today</h4>
                 <p class="p4">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
-            </section>
-            <form class="form2">
-                <input type="text" id="mail2" name="mail2" value=""><br>
-                <input type="submit" value="Get Started For Free">
-            </form>
-            <footer>
-                <img src="img/logo.svg" alt="" class="fylo-foot">
-                <div class="contact">
-                    <div class="phone">
-                        <img src="img/icon-phone.svg">
-                        <p class="p4">Phone:+1-543-123-4567</p>
-                    </div>
-                    <div class="mail">
-                        <img src="img/icon-email.svg">
-                        <p class="p4">example@fylo.com</p>
-                    </div>
-                    <div class="about">
-                        <p class="p5">About Us</p>
-                        <p class="p5">Jobs</p>
-                        <p class="p5">Press</p>
-                        <p class="p5">Blog</p>
-                    </div>
-                    <div class="contact-us">
-                        <p class="p5">Contact Us</p>
-                        <p class="p5">Teams</p>
-                        <p class="p5">Privacy</p>
-                    </div>
-                    <div class="icones">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                    </div>
-                </div>
-            </footer>
             </div>
+            <form class="form2">
+                <input type="email" id="mail2" name="mail2" placeholder="email@example.com" class="mail2"><br>
+                <div></div>
+                <input type="submit" value="Get Started For Free" class="btn2">
+            </form>
+        </section>
+        <footer class="foot">
+            <img src="img/logofoot.svg" alt="" class="fylo-foot">
+            <div class="contact">
+                <div class="phone">
+                    <img src="img/icon-phone.svg">
+                    <p class="p6">Phone:+1-543-123-4567</p>
+                </div>
+                <div class="mail">
+                    <img src="img/icon-email.svg">
+                    <p class="p6">example@fylo.com</p>
+                </div>
+            </div>
+            <div class="about">
+                <p><a href="#aboutUs" class="link">About Us</a></p>
+                <p><a href="#Jobs" class="link">Jobs</a></p>
+                <p><a href="#Press" class="link">Press</a></p>
+                <p><a href="#Blog" class="link">Blog</a></p>
+            </div>
+            <div class="contact-us">
+                <p><a href="#ContactUs" class="link">Contact Us</a></p>
+                <p><a href="#Teams" class="link">Teams</a></p>
+                <p><a href="#Privacy" class="link">Privacy</a></p>
+            </div>
+            <div class="icones">
+                <a href="#f"><i class="fa-brands fa-facebook fa-xl logo-social"></i></a>
+                <a href="#t"><i class="fa-brands fa-twitter fa-xl logo-social"></i></a>
+                <a href="#i"><i class="fa-brands fa-instagram fa-xl logo-social"></i></a>
+            </div>
+            
+        </footer>
+            
         <script src="vierge.js"></script>
     </body>
 </html>
